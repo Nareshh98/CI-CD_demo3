@@ -39,7 +39,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
 		</plugins>
+		<finalName>sping-docker2</finalName>
 	</build>
 
 </project>
