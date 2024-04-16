@@ -14,13 +14,13 @@ pipeline{
             }
         }
 
-        stage("Build Process"){
-            steps{
-                script{
-                  //  sh 'mvn clean install'
-                }
-            }
-        }
+//         stage("Build Process"){
+//             steps{
+//                 script{
+//                   //  sh 'mvn clean install'
+//                 }
+//             }
+//         }
 
         stage("Build Image"){
             steps{
