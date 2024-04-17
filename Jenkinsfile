@@ -14,13 +14,14 @@ pipeline{
             }
         }
 
-        stage("Build Process"){
-            steps{
-                script{
-                    bat 'mvn clean install'
+        stage("Build Process") {
+            steps {
+                script {
+                    bat './mvnw clean install'
                 }
             }
         }
+
 
         stage("Build Image"){
             steps{
