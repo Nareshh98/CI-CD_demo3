@@ -17,7 +17,7 @@ pipeline{
         stage("Build Process") {
             steps {
                 script {
-                    bat './mvnw clean install'
+                    bat './mvn clean install'
                 }
             }
         }
