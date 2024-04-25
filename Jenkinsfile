@@ -16,16 +16,16 @@ pipeline{
 
         stage("Build Process") {
             steps {
-                script {
-                    bat './mvn clean install'
-                }
+                script{
+                  sh 'mvn clean install'
+                  }
             }
         }
 
         stage("Build Image"){
             steps{
                 script{
-                    bat 'docker build -t challnaresh/springboot:1.0.'
+                     sh 'docker build -t challnaresh/springboot:1.0.'
                 }
             }
         }
