@@ -25,7 +25,7 @@ pipeline{
         stage("Build Image"){
             steps{
                 script{
-                     sh 'docker build -t challnaresh/springboot:1.0.'
+                     sh 'docker build -t naresh123h/springboot:1.0.'
                 }
             }
         }
