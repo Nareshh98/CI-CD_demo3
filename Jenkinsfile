@@ -33,11 +33,23 @@ pipeline{
         stage("Build Image"){
               steps{
                   script{
-                            sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
+                    sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
 
                    }
-                }
+              }
         }
+
+        stage("Deploying Image to Hub"){
+                      steps{
+                          script{
+                      withCredentials([string(credentialsId: 'Docker-Cred', variable: 'DockerVariable')]) {
+                          sh 'docker login -u javatechie4u -p ${DockerVariable}'
+                          sh 'docker push ${IMAGE_NAME}:${IMAGE_TAG}'
+                           }
+                      }
+                }
+
+
 
     }
 }
