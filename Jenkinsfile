@@ -43,7 +43,7 @@ pipeline{
                       steps{
                           script{
                       withCredentials([string(credentialsId: 'Docker-Cred', variable: 'DockerVariable')]) {
-                          sh 'docker login -u javatechie4u -p ${DockerVariable}'
+                          sh 'docker login -u naresh123h -p ${DockerVariable}'
                           sh 'docker push ${IMAGE_NAME}:${IMAGE_TAG}'
                            }
                       }
